@@ -1,0 +1,120 @@
+ 
+.h1{
+    color: rgb(255, 251, 251);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+.role-wrap{
+    position:relative;
+    display: inline-block;
+    height: 1.2em;
+    vertical-align: bottom;
+}
+.role{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    white-space: nowrap;
+    background:linear-gradient(90deg,#fcfcfc,#f7f0f0,#c3baba) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:cycle 9s infinite;
+}
+.role:nth-child(1){animation-delay: 0s;}
+.role:nth-child(2){animation-delay: 3s;}
+.role:nth-child(3){animation-delay: 6s;}
+
+@keyframes cycle {
+    0% {opacity: 0;}
+    5%{opacity: 1;}
+    30%{opacity: 1;}
+    35%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+.about{
+    max-width: 650px;
+    margin: 30px auto;
+}
+.intro, .Experience{
+    font-size: 1.15em;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #e5e7eb;
+    background: rgba(255,255,255,0.55);
+    padding: 25px 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    max-width: 650px;
+    margin: 30px auto;
+}
+.about h3{
+    color: #f72585;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(247,37,133,0.6);
+    margin: 40px 0 20px;
+}
+.qualifications{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+.qualifications li{
+    background: rgba(114,9,183,0.150);
+    border: 1ox solid #7209b7;
+    border-radius: 10px;
+    padding: 14px 20px;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+
+}
+.qualifications li:hover{
+    transform: translateX(8px);
+    box-shadow: 0 0 15px rgba(114,9,183,0.5);
+}
+.contact{
+    margin-top: 25px;
+    padding: 20px;
+    background: #1a1a2e;
+    border: 1px solid #7209b7;
+    border-radius: 10px;
+    display: inline-block;
+
+}
+.contact p{
+    margin: 8px 0;
+    font-size: 1.05em;
+    color: #d1d5db;
+
+}
+.cta-text{
+    margin-top: 12px;
+    font-style: italic;
+    color: #f72585;
+}
+body{
+    background: linear-gradient(-45deg,#0f0f1a,#1a1a2e,#3a0ca3,#0f0f1a);
+    background-size: 400% 400%;
+    animation: gradientMove 15s  ease infinite;
+    color: #d1d5db;
+    font-family: 'Poppins','Segoe UI',sans-serif;
+
+}
+@keyframes gradientMove{
+    0% {background-position: 0% 50% ;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
